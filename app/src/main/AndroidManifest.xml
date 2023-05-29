@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TicketBox"
+        tools:targetApi="31"
+        >
+
+
+
+        <activity
+            android:name="com.example.ticketbox.ui.LaunchActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.example.ticketbox.ui.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:windowSoftInputMode="stateHidden"
+            tools:ignore="WrongManifestParent" />
+
+
+        <activity
+            android:name="com.example.ticketbox.ui.SecurityActivity"
+            android:label="Security Settings"
+            android:parentActivityName="com.example.ticketbox.ui.MainActivity"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ticketbox.ui.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="com.example.ticketbox.ui.ProfileActivity"
+            android:label="Profile"
+            android:parentActivityName="com.example.ticketbox.ui.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ticketbox.ui.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="com.example.ticketbox.ui.ItineraryActivity"
+            android:label="Ticket"
+            android:parentActivityName="com.example.ticketbox.ui.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ticketbox.ui.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="com.example.ticketbox.ui.RegisterActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name="com.example.ticketbox.ui.LoginActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name="com.example.ticketbox.ui.CheckOutActivity"
+            android:label="Checkout"
+            android:parentActivityName="com.example.ticketbox.ui.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ticketbox.ui.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="com.example.ticketbox.ui.OneWayFlightListActivity"
+            android:label="Flight list"
+            android:parentActivityName="com.example.ticketbox.ui.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ticketbox.ui.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="com.example.ticketbox.ui.ReturnFlightListActivity"
+            android:label="Rlight list"
+            android:parentActivityName="com.example.ticketbox.ui.OutboundFlightListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ticketbox.ui.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="com.example.ticketbox.ui.OutboundFlightListActivity"
+            android:label="Flight list"
+            android:parentActivityName="com.example.ticketbox.ui.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ticketbox.ui.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="com.example.ticketbox.ui.FlightDetailActivity"
+            android:label="Flight Detail"
+            android:parentActivityName="com.example.ticketbox.ui.ItineraryActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ticketbox.ui.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="com.example.ticketbox.ui.EditProfileActivity"
+            android:label="Edit Profile"
+            android:parentActivityName="com.example.ticketbox.ui.ProfileActivity"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ticketbox.ui.MainActivity" />
+        </activity>
+    </application>
+
+
+
+</manifest>
